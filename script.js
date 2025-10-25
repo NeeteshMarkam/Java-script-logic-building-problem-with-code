@@ -1,4 +1,4 @@
-// //Finding the greatest of  numbers
+// //1.Finding the greatest of  numbers
 // function greatestNum(num1,num2 ,num3) {
 
 //     if (num1>num2 && num1>num3) {
@@ -21,7 +21,7 @@
 // greatestNum(8,4,7)
 
 
-// //Checking if a number is positive, nagative,or zero
+// //2.Checking if a number is positive, nagative,or zero
 // function checknumber(num3) {
 //     if (num3>0) {
 //         console.log(`value of number is positive ${num3}`)
@@ -37,12 +37,11 @@
 // checknumber(0)
 // checknumber(-23)
 
-
 // let a = 8;
 // let result = a>0?'positive':a<0?nagative: "zero";
 // console.log(result)
 
-// //check if a year is a leap year
+// //3.check if a year is a leap year
 // // if(year%4==0 && year % 100 != 0|| year %400 == 0)
 // function checkLeapYear(year) {
 //     if(year%4==0 && year % 100 != 0|| year %400 == 0) {
@@ -56,7 +55,7 @@
 
 
 
-// // check number is divisible by 3 and 5
+// //4. check number is divisible by 3 and 5
 // function divis(a) {   
 //     if (a%3==0&& a%5==0) {
 //         console.log(`number is divisible by 3and 5`)
@@ -76,7 +75,7 @@
 // divis(15)
 // divis(9)
 
-// //Check if a Character is a Vowel or Consonant
+// //5.Check if a Character is a Vowel or Consonant
 // function charVowelorConsan(char){
 
 //     let vowel = "aeiouAEIOU";
@@ -93,7 +92,7 @@
 // charVowelorConsan("b")
 
 
-// //Checking if a number is a palindrome (same forward/backward, like 121)
+// //6.Checking if a number is a palindrome (same forward/backward, like 121)
 // function palindrome(palinum) {
 
 //     let original = palinum;
@@ -114,7 +113,7 @@
 // palindrome(123)
 
 
-// //Finding the sum of digits of a number (like 123 → 1+2+3=6)?
+// //7.Finding the sum of digits of a number (like 123 → 1+2+3=6)?
 // function digitsum(a) {
 
 //     let sum=0;
@@ -127,7 +126,7 @@
 // }
 // digitsum(823)
 
-// //Check Whether a Number is an Armstrong Number
+// //8.Check Whether a Number is an Armstrong Number
 // function armstrongCheck(armNumber) {
 
 //     let original = armNumber;
@@ -151,7 +150,7 @@
 // armstrongCheck(1634)
 
 
-// //Find the Sum of Even and Odd Digits Separately
+// //9.Find the Sum of Even and Odd Digits Separately
 // function evenOddSepatately(num) {
 //     let evenSum = 0;
 //     let oddSum =0;
@@ -171,26 +170,95 @@
 // evenOddSepatately(12345)
 // evenOddSepatately(987654)
 
-//Count Total, Even, and Odd Digits
+// //10.Count Total, Even, and Odd Digits
+// function totalEvenOddcount(num1) {
+//     console.log(`Input: ${num1}`);
+//     console.log(`Total digits: ${num1.toString().length}`)
 
-function totalEvenOddcount(num1) {
-    console.log(`Input: ${num1}`);
-    console.log(`Total digits: ${num1.toString().length}`)
+//     let evencount =0;
+//     let oddcount =0;
 
-    let evencount =0;
-    let oddcount =0;
+//     while (num1>0) {
+//         let digit = num1%10;
+//         if (digit%2==0) {
+//             evencount++;
+//         } else {
+//             oddcount++;
+//         }
+//         num1=Math.floor(num1/10)
+//     }
+//      console.log(`Even digits: ${evencount}`);
+//      console.log(`Odd digits: ${oddcount}`);
 
-    while (num1>0) {
-        let digit = num1%10;
-        if (digit%2==0) {
-            evencount++;
-        } else {
-            oddcount++;
+// }
+// totalEvenOddcount(24631)
+
+
+// //11.Finding largest and smallest digit in a number?
+// function largestSmallerDigit(num) {
+//     let largest = 0;
+//     let smaller = 9;
+//     while (num > 0) {
+//         let digit = num % 10;
+
+//         if (digit > largest) {
+//             largest = digit;
+//         }
+//         else{
+//             smaller = digit;
+
+//         }
+//         num = Math.floor(num / 10)
+//     }
+//     console.log(`Largest digit:${largest}`);
+//     console.log(`smallest digit:${smaller}`);
+// }
+// largestSmallerDigit(23464)
+
+// //12.Checking prime numbers (new logical pattern),
+// function primeNumberCheck(num) {
+
+//     if (num<=1) {
+//         console.log(`this is not prime number`)
+//         return;
+//     }
+
+//     let isprimeflag = true;
+
+//     for (let i = 2; i <= num-1; i++) {
+//         if (num%i===0) {
+//             isprimeflag=false;
+//             break;
+//         }
+//     }
+//     if (isprimeflag) {
+//           console.log(`this is prime number`)
+//     } else {
+//            console.log(`this is not prime number`)        
+
+//     }
+// }
+// primeNumberCheck(9)
+
+
+function printPrimeInrange(star,end) {
+   
+    for(let num = star;num<=end;num++){
+        if (isprime(num)) {
+            console.log(num)
         }
-        num1=Math.floor(num1/10)
     }
-     console.log(`Even digits: ${evencount}`);
-     console.log(`Odd digits: ${oddcount}`);
-    
 }
-totalEvenOddcount(24631)
+
+function isprime(num) {
+    if (num<=1) return false;
+    for (let i = 2; i <=Math.sqrt(num); i++) {
+       if (num%i ===0) return false;
+    }
+    return true;
+}
+printPrimeInrange(1,100)
+
+
+//Perfect numbers (sum of factors = number), or
+//2️⃣ Fibonacci series (next-level loop + logic pattern)
