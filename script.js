@@ -241,24 +241,64 @@
 // primeNumberCheck(9)
 
 
-function printPrimeInrange(star,end) {
-   
-    for(let num = star;num<=end;num++){
-        if (isprime(num)) {
-            console.log(num)
-        }
-    }
-}
 
-function isprime(num) {
-    if (num<=1) return false;
-    for (let i = 2; i <=Math.sqrt(num); i++) {
-       if (num%i ===0) return false;
-    }
-    return true;
-}
-printPrimeInrange(1,100)
+////13.Print all prime numbers in a given range (example: from 1 to 100).
+// function printPrimeInrange(star,end) { 
+//     for(let num = star;num<=end;num++){
+//         if (isprime(num)) {
+    //             console.log(num)
+    //         }
+    //     }
+    // }
+    // function isprime(num) {
+        //     if (num<=1) return false;
+        //     for (let i = 2; i <=Math.sqrt(num); i++) {
+            //        if (num%i ===0) return false;
+            //     }
+            //     return true;
+            // }
+            // printPrimeInrange(1,100)
+            
+            
+ // //14.“Generate Fibonacci series”?
+            // function fibonacci(num) {
+            //     let a = 0;
+            //     let b =1;
+            // console.log(a);
+            // console.log(b);
+            //  for (let i = 1; i <= num; i++) {
+            //       let seq = a+b;
+            //       console.log(seq)
+            //       a=b;
+            //       b=seq;
+            
+            //     }
+            // }
+            // fibonacci(5)
 
 
-//Perfect numbers (sum of factors = number), or
-//2️⃣ Fibonacci series (next-level loop + logic pattern)
+
+// //15.Perfect numbers (sum of factors = number)
+// function numberFactor(num) {
+//     let sum =0;
+//     for(let i=1;i<=num-1;i++){
+//         if (num%i===0) {
+//             sum+=i;
+//         }
+//     }
+//     if (sum===num) {
+//         console.log(`${num} is a perfect number`);
+//     } else {
+//           console.log(`${num} is not a perfect number`);
+//     }
+    
+// }
+// numberFactor(28)
+// numberFactor(6)
+// numberFactor(12)
+
+
+
+
+
+
