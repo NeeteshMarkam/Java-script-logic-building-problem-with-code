@@ -246,35 +246,35 @@
 // function printPrimeInrange(star,end) { 
 //     for(let num = star;num<=end;num++){
 //         if (isprime(num)) {
-    //             console.log(num)
-    //         }
-    //     }
-    // }
-    // function isprime(num) {
-        //     if (num<=1) return false;
-        //     for (let i = 2; i <=Math.sqrt(num); i++) {
-            //        if (num%i ===0) return false;
-            //     }
-            //     return true;
-            // }
-            // printPrimeInrange(1,100)
-            
-            
- // //14.“Generate Fibonacci series”?
-            // function fibonacci(num) {
-            //     let a = 0;
-            //     let b =1;
-            // console.log(a);
-            // console.log(b);
-            //  for (let i = 1; i <= num; i++) {
-            //       let seq = a+b;
-            //       console.log(seq)
-            //       a=b;
-            //       b=seq;
-            
-            //     }
-            // }
-            // fibonacci(5)
+//             console.log(num)
+//         }
+//     }
+// }
+// function isprime(num) {
+//     if (num<=1) return false;
+//     for (let i = 2; i <=Math.sqrt(num); i++) {
+//        if (num%i ===0) return false;
+//     }
+//     return true;
+// }
+// printPrimeInrange(1,100)
+
+
+// //14.“Generate Fibonacci series”?
+// function fibonacci(num) {
+//     let a = 0;
+//     let b =1;
+// console.log(a);
+// console.log(b);
+//  for (let i = 1; i <= num; i++) {
+//       let seq = a+b;
+//       console.log(seq)
+//       a=b;
+//       b=seq;
+
+//     }
+// }
+// fibonacci(5)
 
 
 
@@ -291,13 +291,41 @@
 //     } else {
 //           console.log(`${num} is not a perfect number`);
 //     }
-    
+
 // }
 // numberFactor(28)
 // numberFactor(6)
 // numberFactor(12)
 
 
+
+// //16.Strong Number (sum of factorials of digits = number)
+// function strongNumber(num) {
+// let original = num;
+// let sum =0;
+//     while (num>0) {
+
+//         let digit = num % 10;
+//         sum +=factorial(digit)
+//         num = Math.floor(num/10);
+//     }
+//     if (sum===original) {
+//         console.log(`${original} is a Strong Number`);
+//     } else {
+//         console.log(`${original} is not a Strong Number`);
+//     }
+// }
+
+// function factorial(n) {
+//     let fact =1;
+//     for(let i=1;i<=n;i++){
+//         fact*=i;
+//     }
+//     return fact;
+// }
+// strongNumber(145);
+// strongNumber(2);
+// strongNumber(123);
 
 
 
